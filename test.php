@@ -41,3 +41,14 @@
     <div><u>Hello world</u></div>
 </body>
 </html>
+<?php
+    function prod(&$number){
+        return $number * $number;
+    }
+    $number =10;
+    echo prod($number);
+
+prod($number);
+    echo $number;
+    
+    ?>

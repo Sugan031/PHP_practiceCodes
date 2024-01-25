@@ -50,6 +50,7 @@
     $obj = new calci(100,20,10);
     $obj->sub();
 
+
     // $obj1 = new calculation(100,20,10);
     // $obj1->addpublic();
 
