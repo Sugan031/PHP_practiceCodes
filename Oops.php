@@ -1,5 +1,5 @@
 <?php
-    class Fruits{
+    class Fruits1{
         public $name;
         public $color;
 
@@ -20,8 +20,8 @@
     }
 }
 
-$fruit_one = new Fruits();
-$Fruit_Two = new Fruits();
+$fruit_one = new Fruits1();
+$Fruit_Two = new Fruits1();
 
 $fruit_one->set_name("Apple");
 $Fruit_Two->set_name("Banana");
@@ -30,6 +30,4 @@ $Fruit_Two->set_color("yellow");
 
 echo "Name ". $fruit_one->get_name()." Color {$fruit_one->get_color()}<br>";
 echo "Name ".$Fruit_Two->get_name()." Color {$Fruit_Two->get_color()}";
-
-
 ?>
