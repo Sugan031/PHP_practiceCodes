@@ -1,10 +1,10 @@
 <?php
-    session_start();
-    if(isset($_POST['submit']) && $_SERVER['REQUEST_METHOD']=="POST"){
+session_start();
+if (isset($_POST['submit']) && $_SERVER['REQUEST_METHOD'] == "POST") {
     $_SESSION['name'] = $_POST["username"];
-    if(isset($_SESSION['name'])){
-    header("Location: index.php");
-    exit;
+    if (isset($_SESSION['name'])) {
+        header("Location: index.php");
+        exit;
     }
 }
 ?>

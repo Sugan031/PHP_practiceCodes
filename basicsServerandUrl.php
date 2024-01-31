@@ -2,7 +2,7 @@
 
 $url = parse_url('https://www.w3resource.com/php-exercises/php-basic-exercises.php');
 
-foreach($url as $key => $value){
+foreach ($url as $key => $value) {
     echo "$key => $value<br>";
 }
 
@@ -16,6 +16,3 @@ echo "<br><br>";
 
 // // Display the modified text with styled first letters
 // echo $text;
-
-
-?>

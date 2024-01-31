@@ -1,17 +1,14 @@
 <?php
-    class constant_sample{
-        const Mymessage = "Hello, welcome to Jurassic Park<br>";
+class constant_sample
+{
+    const Mymessage = "Hello, welcome to Jurassic Park<br>";
 
-        function sayhello(){
-            echo self ::Mymessage;
-        }
+    public function sayhello()
+    {
+        echo self::Mymessage;
     }
+}
 
-    echo constant_sample :: Mymessage;
-    $obj = new constant_sample;
-    $obj->sayhello();
-
-    
-
-
-?>
+echo constant_sample::Mymessage;
+$obj = new constant_sample;
+$obj->sayhello();

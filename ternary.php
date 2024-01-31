@@ -20,13 +20,12 @@ print_r("Value of b is " . $b);
 <?php
 $regexValue = '/^[A-Z][a-z]*[\s][A-Z]$/';
 $username = $_POST["name"];
-    if(isset($_POST["submit"])){
-        if(preg_match($regexValue,$username)){
-            $ternary = strlen($username)>10 ? "Your name is big" : "Your name is short";
-            echo $ternary;
-        }
-        else{
-            die("Your name is not valid");
-        }
+if (isset($_POST["submit"])) {
+    if (preg_match($regexValue, $username)) {
+        $ternary = strlen($username) > 10 ? "Your name is big" : "Your name is short";
+        echo $ternary;
+    } else {
+        die("Your name is not valid");
     }
+}
 ?>

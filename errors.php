@@ -59,47 +59,46 @@
 //     echo "Caught exception: " . $e->getMessage();
 // }
 
-function checkAge($number){
-    if($number<18){
+function checkAge($number)
+{
+    if ($number < 18) {
         throw new Exception("You are not eligible candidate to vote");
     }
     return true;
 }
-    function my_error($error_number, $error_string, $filename, $line_number){
-        echo $error_number."<br>";
-        echo $error_string."<br>";
-        echo $filename."<br>";
-        echo $line_number."<br>";
+function my_error($error_number, $error_string, $filename, $line_number)
+{
+    echo $error_number . "<br>";
+    echo $error_string . "<br>";
+    echo $filename . "<br>";
+    echo $line_number . "<br>";
 
-        echo $error_number." : ". $error_string ." in ". $filename." and ". $line_number;
-    }
+    echo $error_number . " : " . $error_string . " in " . $filename . " and " . $line_number;
+}
 
-    set_error_handler("my_error");
+set_error_handler("my_error");
 
-    try{
-        
-        checkAge(17);
-        echo "<b>Message : You are eligible candidate to vote<b>";
-    }
-    catch(Exception $e1){
-        echo "<b>Message : {$e1->getMessage()}<b>";
-    }
+try {
 
-    trigger_error("This is a my error", E_USER_ERROR);
+    checkAge(17);
+    echo "<b>Message : You are eligible candidate to vote<b>";
+} catch (Exception $e1) {
+    echo "<b>Message : {$e1->getMessage()}<b>";
+}
 
-    // function myErrorHandler($errno, $errstr, $errfile, $errline) {
-    //     echo "<b>Custom error:</b> [$errno] $errstr<br>";
-    //     echo " Error on line $errline in $errfile<br>";
-    // }
-    
-    // // Set user-defined error handler function
-    // set_error_handler("myErrorHandler");
-    
-    // $test=2;
-    
-    // // Trigger error
-    // if ($test>1) {
-    //     trigger_error("A custom error has been triggered");
-    // }
+trigger_error("This is a my error", E_USER_ERROR);
 
-?>
+// function myErrorHandler($errno, $errstr, $errfile, $errline) {
+//     echo "<b>Custom error:</b> [$errno] $errstr<br>";
+//     echo " Error on line $errline in $errfile<br>";
+// }
+
+// // Set user-defined error handler function
+// set_error_handler("myErrorHandler");
+
+// $test=2;
+
+// // Trigger error
+// if ($test>1) {
+//     trigger_error("A custom error has been triggered");
+// }
