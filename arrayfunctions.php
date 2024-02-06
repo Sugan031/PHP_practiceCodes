@@ -63,6 +63,8 @@ $runs = array(12, 87, 54);
 print_r(array_combine($Batsman, $runs));
 echo "<br>";
 
+print_r(array_merge($Batsman,$runs));
+
 //to count the each values present arrat_count_values()
 $fruits = array("apple", "banana", "orange", "banana", "Guava", "apple");
 print_r(array_count_values($fruits));
@@ -73,8 +75,27 @@ print_r($fruitCount);
 echo "<br>";
 $sample1 = array("a" => 1, "b" => 2, "c" => 7, "d" => 4);
 $sample2 = array("a" => 1, "k" => 2, "c" => 3, "d" => 4, "e" => 5);
-$sample3 = array("a" => 1, "b" => 2, "c" => 7, "d" => 4);
+$sample3 = array("a" => 5, "b" => 6, "c" => 3, "d" => 8);
 
+echo "*****************************";
+echo "<br>";
+print_r(array_combine($sample1,$sample3));
+echo "<br>";
+print_r(array_merge($sample1,$sample3));
+echo "<br>";
+// $array1 = array("subject1" => "Python","subject2" => "sql"); 
+  
+  
+// // Define array2 with keys and values 
+// $array2 = array("subject1" => "c/c++","subject2" => "java"); 
+  
+// // Merge both array1 and array2 
+// // $final = array_merge($array1, $array2); 
+  
+// // Display merged array 
+// print_r($final); 
+echo "******************************";
+echo "<br>";
 
 //The array_diff() function compares the values of two (or more) arrays, and returns the differences.
 print_r(array_diff($sample2, $sample1, $sample3));
