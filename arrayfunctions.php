@@ -83,6 +83,8 @@ print_r(array_combine($sample1,$sample3));
 echo "<br>";
 print_r(array_merge($sample1,$sample3));
 echo "<br>";
+print_r(array_merge($sample1,$fruits));
+echo "<br>";
 // $array1 = array("subject1" => "Python","subject2" => "sql"); 
   
   
