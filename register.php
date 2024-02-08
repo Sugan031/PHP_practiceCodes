@@ -1,5 +1,7 @@
 <?php
-    include("./connect.php")
+    include ("./connect.php");
+    include("./registervalidation.php");
+    include("./checkemail.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +16,7 @@
             border-collapse: collapse;
             background-color: lightblue;
         }
-        
+
         th, td {
             padding: 10px;
             border: 1px solid lightslategray;
@@ -31,7 +33,7 @@
     </style>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="" method="post" id="loginform">
         <table>
             <tr>
                 <th>Username</th>
@@ -39,15 +41,18 @@
             </tr>
             <tr>
             <th>Email ID</th>
-            <td><input type="text" name="email" required></td>
+            <td><input type="email" name="email" id="email" required>
+            <small id="small"></small></td>
             </tr>
             <tr>
             <th>Mobile No.</th>
-            <td><input type="tel" name="mobile" required></td>
+            <td><input type="tel" name="mobile" required id="mobile"></td>
             </tr>
             <tr>
             <th>Password</th>
-            <td><input type="text" name="password" required></td>
+            <td><input type="text" name="password" id="pass" required>
+                    <small id="passError">password must be 8-20 letters long</small>
+            </td>
             </tr>
             <tr>
             <th>Country</th>
@@ -71,5 +76,10 @@
             </tr>
         </table>
     </form>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./formvalidation.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./formvalidation.js"></script>
+
 </body>
 </html>
