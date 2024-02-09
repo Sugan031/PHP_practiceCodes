@@ -1,7 +1,11 @@
 <?php
-    include ("./connect.php");
-    include("./registervalidation.php");
-    include("./checkemail.php");
+    // include ("./connect.php");
+    // include("./registervalidation.php");
+    // include("./checkemail.php");
+    // include("./getval.php");"
+    require "./connect.php";
+    require "./registervalidation.php";
+    require "./checkemail.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,10 +15,12 @@
     <title>Document</title>
     <style>
         table {
+            position: relative;
+            top: 250px;
             width: 50%;
             margin: auto;
             border-collapse: collapse;
-            background-color: lightblue;
+            
         }
 
         th, td {
@@ -22,7 +28,7 @@
             border: 1px solid lightslategray;
             text-align: left;
         }
-        #submit{
+        #mybutton{
             background-color: blue;
             color: white;
             padding: 10px 15px;
@@ -30,10 +36,15 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        img{
+            position: absolute;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
-    <form action="" method="post" id="loginform">
+    <img src="https://github.com/azamatyudaev/responsive-login-form/blob/main/assets/img/bg-login.png?raw=true" alt="">
+    <form action="./registervalidation.php" method="post" id="loginform">
         <table>
             <tr>
                 <th>Username</th>
@@ -72,7 +83,7 @@
                 <td><input type="file" name="image"></td>
             </tr> -->
             <tr>
-                <td colspan="2"><button id="submit" name="submit">Submit</button></td>
+                <td colspan="2"><button id="mybutton" name="submit">Submit</button></td>
             </tr>
         </table>
     </form>

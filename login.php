@@ -1,6 +1,6 @@
 <?php
-    include("./connect.php");
-    include("./loginvalidation.php");
+    include "./connect.php";
+    include "./loginvalidation.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,18 +10,20 @@
     <title>login</title>
     <style>
         table {
+            position: relative;
+            top: 350px;
             width: 50%;
             margin: auto;
             border-collapse: collapse;
-            background-color: lightblue;
+            /* background-color: lightblue; */
         }
-        
+
         th, td {
             padding: 10px;
             border: 1px solid lightslategray;
             text-align: left;
         }
-        #submit{
+        #mybutton{
             background-color: blue;
             color: white;
             padding: 10px 15px;
@@ -29,26 +31,32 @@
             border-radius: 4px;
             cursor: pointer;
         }
+        img{
+            position: absolute;
+            opacity: 0.5;
+        }
     </style>
 </head>
 <body>
+    <img src="https://github.com/Taratakos/form-login/blob/main/assets/img/login-bg.png?raw=true" alt="">
     <form action="" method="post">
         <table>
             <tr>
                 <th>Email</th>
-                <td><input type="email" name="email" id="email" placeholder="Enter your mail id">
+                <td><input type="email" name="email" id="email" placeholder="Enter your mail id" required>
                 <small id="small"></small></td>
             </tr>
             <tr>
                 <th>Password</th>
-                <td><input type="password" id="pass" name="password" placeholder="Enter your password">
+                <td><input type="password" id="pass" name="password" placeholder="Enter your password" required>
                 <small id="passError"></small></td>
             </tr>
             <tr>
-                <td colspan="2"><button id="submit" name="submit">Submit</button></td>
+                <td colspan="2"><button type="submit" id="mybutton" name="submit">Submit</button></td>
             </tr>
         </table>
-        
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
         <script src="./validation.js"></script>
 
     </form>

@@ -45,7 +45,7 @@ echo("<br>");
 //The chunk_split() function splits a string into a series of smaller parts.
 
 $strTwo = "Hello world";
-echo chunk_split($strTwo,100,",");
+echo chunk_split($strTwo,2,",");
 
 echo "<br>";
 

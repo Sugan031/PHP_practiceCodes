@@ -1,13 +1,13 @@
 <?php
-    include("./connect.php");
-    include("./regex.php");
-    include("./checkemail.php")
+include "./connect.php";
+include "./regex.php";
+include "./checkemail.php"
 ?>
 <?php
-   if (isset($_POST["submit"])) {
-    if(!preg_match($nameRegex, $_POST["name"])) {
+if (isset($_POST["submit"])) {
+    if (!preg_match($nameRegex, $_POST["name"])) {
         $erorUser = "username is not valid";
-    }elseif(!preg_match($emailPattern, $_POST["email"])) {
+    } elseif (!preg_match($emailPattern, $_POST["email"])) {
         echo "email is not valid";
     } elseif (!preg_match($numberPattern, $_POST["mobile"])) {
         echo "mobile number is not valid";
@@ -19,8 +19,8 @@
     // }
     else {
 
-        $uname  = $_POST["name"];
-        $email  = $_POST["email"];
+        $uname = $_POST["name"];
+        $email = $_POST["email"];
         $mobile = $_POST["mobile"];
         $pass = $_POST["password"];
         $country = $_POST["country"];
@@ -34,8 +34,6 @@
         echo $pass . "<br>";
         echo $country . "<br>";
 
-
-
         $stmt = $conn->prepare("insert into persondetails(username, email_id, mobile_no, password, country)
     values(?,?,?,?,?)");
         $stmt->bind_param("ssiss", $uname, $email, $mobile, $pass, $country);
@@ -46,4 +44,3 @@
 
     }
 }
-?>
