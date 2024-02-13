@@ -9,7 +9,7 @@ if (!empty($_POST["email"]) && !empty($_POST["password"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql = "SELECT password FROM persondetails WHERE email_id=? AND status = 'active'";
+    $sql = "SELECT password FROM person_details WHERE email_id=? AND status = 'active'";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();

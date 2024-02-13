@@ -18,29 +18,32 @@ if (isset($_POST["submit"])) {
     //     echo "image is invalid/not uploaded";
     // }
     else {
-
+        $uid = $_POST["id"];
         $uname = $_POST["name"];
         $email = $_POST["email"];
         $mobile = $_POST["mobile"];
         $pass = $_POST["password"];
         $country = $_POST["country"];
+        $status = "active";
         // $name = $_FILES['image']['name'];
         // $type = $_FILES['image']['type'];
         // $data = file_get_contents($_FILES['image']['tmp_name']);
 
-        echo $uname . "<br>";
-        echo $email . "<br>";
-        echo $mobile . "<br>";
-        echo $pass . "<br>";
-        echo $country . "<br>";
+        // echo $uname . "<br>";
+        // echo $email . "<br>";
+        // echo $mobile . "<br>";
+        // echo $pass . "<br>";
+        // echo $country . "<br>";
 
-        $stmt = $conn->prepare("insert into persondetails(username, email_id, mobile_no, password, country)
-    values(?,?,?,?,?)");
-        $stmt->bind_param("ssiss", $uname, $email, $mobile, $pass, $country);
+        $stmt = $conn->prepare("insert into person_details(id,name, email_id, mobile_no, password, country,status)
+                            values(?,?,?,?,?,?,?)");
+        $stmt->bind_param("ississs", $uid, $uname, $email, $mobile, $pass, $country, $status);
         $stmt->execute();
 
         $stmt->close();
         $conn->close();
+
+        header("Location: /PHP_practiceCodes/login.php ");
 
     }
 }

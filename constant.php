@@ -10,5 +10,5 @@ class constant_sample
 }
 
 echo constant_sample::Mymessage;
-$obj = new constant_sample;
+$obj = new constant_sample();
 $obj->sayhello();

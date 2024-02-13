@@ -2,7 +2,7 @@
     include "./connect.php";
     session_start();
     $email = $_SESSION["mail"];
-    $sql = "SELECT * FROM persondetails WHERE email_id=?";
+    $sql = "SELECT * FROM person_details WHERE email_id=?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -54,8 +54,12 @@
     <img src="https://github.com/bedimcode/animated-login-form/blob/main/assets/img/login-bg.png?raw=true" alt="">
     <table>
         <tr>
+            <th>ID</th>
+            <td><?php echo $row["id"]; ?></td>
+        </tr>
+        <tr>
             <th>Username</th>
-            <td><?php echo $row["username"]; ?></td>
+            <td><?php echo $row["name"]; ?></td>
         </tr>
         <tr>
             <th>Email</th>
