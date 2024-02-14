@@ -54,10 +54,6 @@
     <img src="https://github.com/bedimcode/animated-login-form/blob/main/assets/img/login-bg.png?raw=true" alt="">
     <table>
         <tr>
-            <th>ID</th>
-            <td><?php echo $row["id"]; ?></td>
-        </tr>
-        <tr>
             <th>Username</th>
             <td><?php echo $row["name"]; ?></td>
         </tr>

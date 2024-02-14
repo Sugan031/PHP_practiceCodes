@@ -38,7 +38,7 @@
     </style>
 </head>
 <body>
-    <img src="https://github.com/Taratakos/form-login/blob/main/assets/img/login-bg.png?raw=true" alt="">
+    <!-- <img src="https://github.com/Taratakos/form-login/blob/main/assets/img/login-bg.png?raw=true" alt=""> -->
     <form action="" method="post">
         <table>
             <tr>
@@ -60,5 +60,6 @@
         <script src="./validation.js"></script>
 
     </form>
+    <a href="./register.php">Register</a>
 </body>
 </html>
