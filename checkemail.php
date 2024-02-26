@@ -12,7 +12,7 @@ if (isset($_POST['email'])) {
     $row = $result->fetch_assoc();
 
     // Return a simple response string
-    return $row['count'] > 0 ? 'taken' : 'available';
+    echo $row['count'] > 0 ? 'taken' : 'available';
     if ($row['count'] > 0) {
         $stmt->close();
         $conn->close(); // Close the database connection
