@@ -1,6 +1,17 @@
-{
-  "name": "John Arokiyaraj",
-  "age": 20,
-  "city": "Chennai"
-}
-
+[
+  {
+    "name" : "John Arokiyaraj",
+    "age"  : 20,
+    "city" : "Chennai"
+  },
+  {
+    "name" : "John Durairaj",
+    "age"  : 28,
+    "city" : "Chennai"
+  },
+  {
+    "name" : "Joseph Kurvilla",
+    "age"  : 32,
+    "city" : "Kochi"
+  }
+]
