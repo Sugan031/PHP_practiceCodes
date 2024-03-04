@@ -7,6 +7,7 @@
     <p>Mobile: {{ $record->mobile }}</p>
     <p>Year: {{ $record->year }}</p>
     <p>Department: {{ $record->department }}</p>
+    <a href="/home/{{$record->id}}/edit"><h4><i class="bi bi-pencil-square"></i>Edit</h4></a>
 </li>
 <hr>
 @endforeach

@@ -41,4 +41,27 @@ class RegisterController extends Controller
 
         return view('ShowHome')->with('data',$data);
     }
+
+    public function edit($id){
+        $data = RegisterModel::find($id);
+        if (!$data) {
+            abort(404); // or handle the case in your own way
+        }
+        return view('edit')->with('data',$data);
+    }
+    public function update(Request $request, $id){
+        $request->validate([
+            "name"=>"required|string",
+            "email"=>"required|unique:register_models,email|email",
+            "mobile"=>"required|regex:/^[0-9]{10}$/|unique:register_models,mobile",
+            "year"=>"required",
+            "department"=>"required"
+        ],[
+            'mobile.regex' => 'The mobile number must be a 10-digit numeric value.',
+        ]);
+        $data = RegisterModel::find($id);
+        $data->update($request->validated());
+        return $data;
+        // return view('ShowHome')->with('data',$data);
+    }
 }
